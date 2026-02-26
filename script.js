@@ -99,3 +99,16 @@ themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('light');
     localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
 });
+
+
+// loader
+
+window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+    setTimeout(() => {
+        loader.classList.add('hidden');
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 1.5s ease';
+        setTimeout(() => { document.body.style.opacity = '1'; }, 100);
+    }, 800);
+});

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asadbek — Frontend Developer</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- CURSOR -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <span class="nav-logo">DEVFAST<span class="accent">.</span></span>
+        <ul class="nav-links">
+            <li><a href="#about">about</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="#skills">skills</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="noise"></div>
+        <div class="hero-content">
+            <p class="hero-tag">— Frontend Developer</p>
+            <h1 class="hero-title">
+                <span class="line" data-delay="0">I build</span>
+                <span class="line accent-line" data-delay="150">beautiful</span>
+                <span class="line" data-delay="300">interfaces.</span>
+            </h1>
+            <p class="hero-sub">
+                TypeScript · React · Next.js · Tailwind CSS
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn-primary">Ko'rish →</a>
+                <a href="#contact" class="btn-ghost">Bog'lanish</a>
+            </div>
+        </div>
+        <div class="hero-grid"></div>
+        <div class="scroll-indicator">
+            <span>scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about section" id="about">
+        <div class="container">
+            <span class="section-num">01</span>
+            <h2 class="section-title">Men haqimda</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        Salom! Men <strong>Asadbek</strong> — Jizzaxdan Frontend Developer.
+                        Toza dizayn va yuqori sifatli kod yozishni yaxshi ko'raman.
+                    </p>
+                    <p>
+                        React va TypeScript bilan ishlayman, har bir loyihaga maxsus e'tibor bilan yondashaman.
+                        Foydalanuvchi tajribasini yaxshilash mening asosiy maqsadim.
+                    </p>
+                    <div class="about-meta">
+                        <div class="meta-item">
+                            <span class="meta-num">2</span>
+                            <span class="meta-label">Yil tajriba</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-num">15+</span>
+                            <span class="meta-label">Loyihalar</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-num">∞</span>
+                            <span class="meta-label">Qahva</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-code">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="code-filename">about.ts</span>
+                        </div>
+                        <pre class="code-body"><code><span class="kw">const</span> <span class="var">me</span> = {
+  <span class="key">name</span>:     <span class="str">"Asadbek"</span>,
+  <span class="key">location</span>: <span class="str">"Jizzax 🇺🇿"</span>,
+  <span class="key">role</span>:     <span class="str">"Frontend Dev"</span>,
+  <span class="key">stack</span>: [
+    <span class="str">"TypeScript"</span>,
+    <span class="str">"React"</span>,
+    <span class="str">"Next.js"</span>,
+    <span class="str">"Tailwind"</span>,
+  ],
+  <span class="key">available</span>: <span class="bool">true</span>,
+};</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects section" id="projects">
+        <div class="container">
+            <span class="section-num">02</span>
+            <h2 class="section-title">Loyihalar</h2>
+            <div class="projects-grid">
+
+                <div class="project-card" data-index="01">
+                    <div class="project-top">
+                        <span class="project-num">01</span>
+                        <div class="project-links">
+                            <a href="#" target="_blank" title="GitHub">⌥ GitHub</a>
+                            <a href="#" target="_blank" title="Live">↗ Live</a>
+                        </div>
+                    </div>
+                    <h3 class="project-name">E-Commerce Platform</h3>
+                    <p class="project-desc">Next.js + TypeScript bilan qurilgan zamonaviy online do'kon. Stripe to'lov
+                        tizimi bilan.</p>
+                    <div class="project-tags">
+                        <span>Next.js</span><span>TypeScript</span><span>Stripe</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-index="02">
+                    <div class="project-top">
+                        <span class="project-num">02</span>
+                        <div class="project-links">
+                            <a href="#" target="_blank">⌥ GitHub</a>
+                            <a href="#" target="_blank">↗ Live</a>
+                        </div>
+                    </div>
+                    <h3 class="project-name">Dashboard UI</h3>
+                    <p class="project-desc">Real-time analytics dashboard. React Query va Recharts bilan qurilgan.</p>
+                    <div class="project-tags">
+                        <span>React</span><span>Tailwind</span><span>Recharts</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-index="03">
+                    <div class="project-top">
+                        <span class="project-num">03</span>
+                        <div class="project-links">
+                            <a href="#" target="_blank">⌥ GitHub</a>
+                            <a href="#" target="_blank">↗ Live</a>
+                        </div>
+                    </div>
+                    <h3 class="project-name">Portfolio Template</h3>
+                    <p class="project-desc">Boshqa developerlar uchun ochiq manbali portfolio shablon.</p>
+                    <div class="project-tags">
+                        <span>HTML</span><span>CSS</span><span>JS</span>
+                    </div>
+                </div>
+
+                <div class="project-card add-card">
+                    <span>+</span>
+                    <p>Yangi loyiha<br />tez orada</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills section" id="skills">
+        <div class="container">
+            <span class="section-num">03</span>
+            <h2 class="section-title">Texnologiyalar</h2>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h4>Core</h4>
+                    <ul>
+                        <li><span class="skill-bar" style="--w:95%"></span>TypeScript<em>95%</em></li>
+                        <li><span class="skill-bar" style="--w:90%"></span>JavaScript<em>90%</em></li>
+                        <li><span class="skill-bar" style="--w:85%"></span>HTML / CSS<em>85%</em></li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h4>Frameworks</h4>
+                    <ul>
+                        <li><span class="skill-bar" style="--w:90%"></span>React<em>90%</em></li>
+                        <li><span class="skill-bar" style="--w:80%"></span>Next.js<em>80%</em></li>
+                        <li><span class="skill-bar" style="--w:85%"></span>Tailwind CSS<em>85%</em></li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><span class="skill-bar" style="--w:88%"></span>Git / GitHub<em>88%</em></li>
+                        <li><span class="skill-bar" style="--w:70%"></span>Docker<em>70%</em></li>
+                        <li><span class="skill-bar" style="--w:75%"></span>Figma<em>75%</em></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <span class="section-num">04</span>
+            <h2 class="section-title">Bog'lanish</h2>
+            <div class="contact-inner">
+                <p class="contact-intro">Loyiha yoki hamkorlik bo'yicha yozing.</p>
+                <div class="contact-links">
+                    <a href="mailto:you@email.com" class="contact-item">
+                        <span class="ci-icon">✉</span>
+                        <span>asadbekyakubov08@gmail.com</span>
+                    </a>
+                    <a href="https://github.com/asad-hunter00" target="_blank" class="contact-item">
+                        <span class="ci-icon">⌥</span>
+                        <span>Github</span>
+                    </a>
+                    <a href="https://t.me/paradoxtheg" target="_blank" class="contact-item">
+                        <span class="ci-icon">✈</span>
+                        <span>Telegram</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <span>© 2025 Asadbek</span>
+            <span>Jizzax 🇺🇿</span>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>

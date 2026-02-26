@@ -87,3 +87,15 @@ window.addEventListener('load', () => {
     document.body.style.transition = 'opacity 0.5s ease';
     setTimeout(() => { document.body.style.opacity = '1'; }, 100);
 });
+
+
+
+
+const themeToggle = document.getElementById('themeToggle');
+const saved = localStorage.getItem('theme');
+if (saved === 'light') document.body.classList.add('light');
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light');
+    localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+});

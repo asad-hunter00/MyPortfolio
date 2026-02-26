@@ -1,6 +1,5 @@
 /* Global Styles */
 
-
 /* ===== RESET & BASE ===== */
 *,
 *::before,
@@ -35,11 +34,131 @@ body {
     line-height: 1.7;
     overflow-x: hidden;
     cursor: none;
+    transition: background 0.4s ease, color 0.4s ease;
 }
 
 a {
     color: inherit;
     text-decoration: none;
+}
+
+/* ===== LIGHT MODE ===== */
+body.light {
+    --bg: #f2f0eb;
+    --bg2: #e8e5de;
+    --bg3: #dedad1;
+    --border: rgba(0, 0, 0, 0.09);
+    --text: #1a1a1a;
+    --muted: #888;
+}
+
+body.light .nav {
+    background: rgba(242, 240, 235, 0.88);
+}
+
+body.light .noise {
+    opacity: 0.15;
+}
+
+body.light .hero-grid {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+}
+
+body.light .about-text p {
+    color: #555;
+}
+
+body.light .project-desc {
+    color: #666;
+}
+
+body.light .skill-group li {
+    color: #444;
+}
+
+body.light .contact-item {
+    color: #555;
+}
+
+body.light .code-window {
+    background: #fff;
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light .code-header {
+    background: #f5f3ee;
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light .kw {
+    color: #7c3aed;
+}
+
+body.light .var {
+    color: #1d4ed8;
+}
+
+body.light .key {
+    color: #0891b2;
+}
+
+body.light .str {
+    color: #16a34a;
+}
+
+body.light .bool {
+    color: #dc2626;
+}
+
+body.light .cursor {
+    border-color: #1a1a1a;
+    mix-blend-mode: normal;
+}
+
+body.light .cursor-dot {
+    background: #1a1a1a;
+}
+
+/* ===== THEME TOGGLE ===== */
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: none;
+    flex-shrink: 0;
+    transition: border-color 0.2s, color 0.2s, transform 0.35s ease;
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: rotate(22deg);
+}
+
+/* Dark mode → moon ko'rinadi, sun yashiriladi */
+body:not(.light) .icon-sun {
+    display: none;
+}
+
+body:not(.light) .icon-moon {
+    display: block;
+}
+
+/* Light mode → sun ko'rinadi, moon yashiriladi */
+body.light .icon-sun {
+    display: block;
+}
+
+body.light .icon-moon {
+    display: none;
 }
 
 /* ===== SCROLLBAR ===== */
@@ -100,6 +219,7 @@ a {
     border-bottom: 1px solid var(--border);
     background: rgba(8, 8, 8, 0.85);
     backdrop-filter: blur(12px);
+    transition: background 0.4s ease;
 }
 
 .nav-logo {
@@ -147,6 +267,7 @@ a {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
     pointer-events: none;
     opacity: 0.5;
+    transition: opacity 0.4s;
 }
 
 .hero-grid {
@@ -158,6 +279,7 @@ a {
     background-size: 60px 60px;
     mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
     pointer-events: none;
+    transition: background-image 0.4s;
 }
 
 .hero-content {
@@ -319,6 +441,7 @@ a {
     color: #aaa;
     margin-bottom: 1.2rem;
     line-height: 1.8;
+    transition: color 0.4s;
 }
 
 .about-text strong {
@@ -358,6 +481,7 @@ a {
     border: 1px solid var(--border);
     border-radius: 8px;
     overflow: hidden;
+    transition: background 0.4s, border-color 0.4s;
 }
 
 .code-header {
@@ -367,6 +491,7 @@ a {
     padding: 0.8rem 1rem;
     border-bottom: 1px solid var(--border);
     background: var(--bg2);
+    transition: background 0.4s;
 }
 
 .dot {
@@ -402,22 +527,27 @@ a {
 
 .kw {
     color: #c792ea;
+    transition: color 0.4s;
 }
 
 .var {
     color: #82aaff;
+    transition: color 0.4s;
 }
 
 .key {
     color: #89ddff;
+    transition: color 0.4s;
 }
 
 .str {
     color: #c3e88d;
+    transition: color 0.4s;
 }
 
 .bool {
     color: #ff9cac;
+    transition: color 0.4s;
 }
 
 /* ===== PROJECTS ===== */
@@ -497,6 +627,7 @@ a {
     font-size: 13px;
     line-height: 1.7;
     margin-bottom: 1.5rem;
+    transition: color 0.4s;
 }
 
 .project-tags {
@@ -564,6 +695,7 @@ a {
     gap: 1rem;
     font-size: 13px;
     color: #bbb;
+    transition: color 0.4s;
 }
 
 .skill-bar {
